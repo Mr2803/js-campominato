@@ -37,9 +37,30 @@ while (numVietati.length < 16){
     if(numVietati.includes(numGen) == false){
         numVietati.push(numGen);
     }
-    console.log(numVietati.length)
+    console.log(numVietati.length);
 }
-
 
 console.log(numVietati)
 
+//In seguito deve chiedere all’utente di inserire un numero da 1 a 100 alla volta,se il numero è presente nella lista dei numeri generati, la partita termina,
+//altrimenti continua chiedendo all’utente un altro numero.
+
+var numGiocatore;
+var gruppoNumeriGiocatore = [];
+
+while (gruppoNumeriGiocatore.length < 84 && (numGiocatore = numVietati)){
+    numGiocatore = parseInt(prompt("inserisci un numero"));
+
+    if(numGiocatore = numVietati){
+        console.log("mi dispiace hai perso")
+    }else{
+        console.log("complimenti hai vinto")
+    }
+
+    /* if(gruppoNumeriGiocatore.includes(numGiocatore)==false){
+        gruppoNumeriGiocatore.push(numGiocatore);
+    }else(
+        alert("attenzione hai già inserito questo numero")
+    ) */
+}
+console.log(gruppoNumeriGiocatore)
