@@ -10,14 +10,36 @@ Ci sono 2 controlli che van fatti già di base per dar senso all’ex:
 i 16 numeri vietati/mina, devono essere tutti diversi, non possono esserci doppioni;
 l’utente non può inserire due volte lo stesso numero, ma sempre numeri diversi.
  */
+//@ts-check
 
 //Il computer deve generare 16 numeri casuali da 1 a 100.
-var numeriPc ; 
+function numRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //Il max è escluso e il min è incluso
+}
 
-for(i=0; i<16 ; i++){
-    numeriPc = Math.floor(Math.random() * 100 + 1);
-    console.log(numeriPc)
+//creo una variabile che sarà uguale alla mia funzione per generare i numeri casuali
+var numRandomUser = numRandom(1,101);
+console.log(numRandomUser)
+
+//creo un array dove inserirò i numeri casuali generati (NON DOPPI)
+var numVietati = [];
+console.log(numVietati.length);
+var i = 0;
+var numGen;
+
+//imposto un ciclo while per far generare 16 numeri diversi e allo stesso tempo faccio fare un controllo tramite la funzione includes che mi permette di verificare se all'interno dell'array sono già presenti i numeri generati casualmente -->
+while (numVietati.length < 16){
+     numGen = numRandom(1,101);
+
+     //<-- se il comando includes mi restituisce falso , allora lo pusho all'interno del mio array numeri generati
+    if(numVietati.includes(numGen) == false){
+        numVietati.push(numGen);
+    }
+    console.log(numVietati.length)
 }
 
 
-//In seguito deve chiedere all’utente di inserire un numero da 1 a 100 alla volta
+console.log(numVietati)
+
