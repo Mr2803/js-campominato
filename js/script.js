@@ -52,7 +52,7 @@ while (gruppoNumeriGiocatore.length < 84 && gruppoNumeriGiocatore == numVietati)
     numGiocatore = parseInt(prompt("inserisci un numero"));
     gruppoNumeriGiocatore.push(numGiocatore);
 
-    if(numGiocatore = numVietati){
+    if (gruppoNumeriGiocatore == numVietati){
         console.log("mi dispiace hai perso")
     }else{
         console.log("complimenti hai vinto")
