@@ -48,8 +48,9 @@ console.log(numVietati)
 var numGiocatore;
 var gruppoNumeriGiocatore = [];
 
-while (gruppoNumeriGiocatore.length < 84 && (numGiocatore = numVietati)){
+while (gruppoNumeriGiocatore.length < 84 && gruppoNumeriGiocatore == numVietati){
     numGiocatore = parseInt(prompt("inserisci un numero"));
+    gruppoNumeriGiocatore.push(numGiocatore);
 
     if(numGiocatore = numVietati){
         console.log("mi dispiace hai perso")
