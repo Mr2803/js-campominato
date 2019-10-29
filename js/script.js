@@ -10,7 +10,7 @@
 //   cioè il numero di volte che l’utente ha inserito un numero
 // consentito.
 
-//genera un numero casuale fra 1 e max
+//genera un numero casuale non ripetuto
 var gruppoMine = [];
 var numRand;
 
@@ -19,8 +19,11 @@ while(gruppoMine.length<16){
     if(gruppoMine.includes(numRand) == false){
         gruppoMine.push(numRand);
     }
+    console.log(numRand)
 }
+
 console.log("i numeri della morte sono : " + gruppoMine)
+
 
 //imposto la mia variabile che sarà la condizione primaria del mio ciclo while
 var beccato = false;
@@ -63,7 +66,8 @@ while (beccato == false){
     }
 
 }
-console.log(gruppoNumeriPlayer)
+console.log("il gruppo di numeri scelti dal giocatore sono:" + gruppoNumeriPlayer)
+console.log("il numero che l'ha portato alla morte è " + (gruppoNumeriPlayer.slice(-1)[0] ))
 //condizione che si verifica alla "morte" del giocatore , stampa il punteggio ottenuto
 if(beccato==true){
     console.log("sei morto facendo " + punteggio + "punti")
