@@ -25,7 +25,7 @@ while(gruppoMine.length<16){
 console.log("i numeri della morte sono : " + gruppoMine)
 
 
-//imposto la mia variabile che sarà la condizione primaria del mio ciclo while
+//imposto la mia variabile che sarà la condizione primaria del mio ciclo while insieme alla lunghezza max di 84
 var beccato = false;
 
 //creo un array vuoto che conterrà i numeri inseriti dall'utente fino alla sua "morte"
@@ -37,8 +37,8 @@ var sceltaPlayer;
 //creo una variabile per il punteggio che inizialmente sarà uguale a 0 , poi verrà incrementata ad ogni numero inserito dall'utente SE ha evitato la mina
 var punteggio = 0;
 
-// apro un ciclo while la cui condizione primaria è che BECCATO sia false , dovesse diventare vera il ciclo avrebbe fine
-while (beccato == false){
+// apro un ciclo while la cui condizione primaria è che BECCATO sia false e che l'array gruppoNumeriPlayer abbia una lunghezza minore di 84 ,
+while (beccato == false && gruppoNumeriPlayer.length < 84 ){
     //faccio un prompt per far inserire all'utente i numeri tra 1 e 100 -->
     sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
     console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
@@ -67,16 +67,17 @@ while (beccato == false){
 
 }
 console.log("il gruppo di numeri scelti dal giocatore sono:" + gruppoNumeriPlayer)
-console.log("il numero che l'ha portato alla morte è " + (gruppoNumeriPlayer.slice(-1)[0] ))
+
 //condizione che si verifica alla "morte" del giocatore , stampa il punteggio ottenuto
 if(beccato==true){
     console.log("sei morto facendo " + punteggio + "punti")
+    console.log("il numero che l'ha portato alla morte è " + (gruppoNumeriPlayer.slice(-1)[0]))
+} else { //condizioni per la vittoria
+    console.log("sembra impossibile , ma hai vinto... Porta Simone in tabaccheria")
 }
 
-//condizioni per la vittoria
-if(punteggio == 84 && beccato == false){
-    console.log("sembra impossibile , ma hai vinto... Porta simone in tabaccheria")
-}
+
+
 
 //Blocco funzioni
 
