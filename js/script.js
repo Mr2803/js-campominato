@@ -38,7 +38,7 @@ var sceltaPlayer;
 var punteggio = 0;
 
 // apro un ciclo while la cui condizione primaria è che BECCATO sia false e che l'array gruppoNumeriPlayer abbia una lunghezza minore di 84 ,
-while (beccato == false && gruppoNumeriPlayer.length < 84 ){
+while (beccato == false && punteggio < 84 ){
     //faccio un prompt per far inserire all'utente i numeri tra 1 e 100 -->
     sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
     console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
@@ -49,19 +49,19 @@ while (beccato == false && gruppoNumeriPlayer.length < 84 ){
         if (gruppoNumeriPlayer.includes(sceltaPlayer) == true){
             alert("Non fare il furbo , hai già inserito questo numero")
         //ELSE IF il numero inserito dal giocatore è incluso nell'array gruppoMine allora il giocatore ha perso ed è morto. In questa condizione per far interrompere il ciclo porto la variabile beccato a valore true
-        }else if(gruppoMine.includes(sceltaPlayer) == true){
+        } else if(gruppoMine.includes(sceltaPlayer) == true){
             alert("La mina è esplosa sei morto");
             beccato = true;
             gruppoNumeriPlayer.push(sceltaPlayer);
         // se MIRACOLOSAMENTE il giocatore ha passato tutti i miei controlli può continuare a giocare, aggiungo 1 punto alla var punteggio e pusho il numero da lui inserito all'interno dell'array gruppoNumeriPlayer
-        }else{
+        } else{
             alert("l'hai mancata per un soffio , puoi continuare...per ora")
             gruppoNumeriPlayer.push(sceltaPlayer);
             punteggio++;
             
         }
     //(else riferito ai controlli preliminari dei valori inseriti dall'utente) invito l'utente ad inserire un valore valido
-    }else{
+    } else{
         alert("inserisci un valore valido")
     }
 
@@ -87,6 +87,19 @@ function getRandomInt(min,max){
     return Math.floor(Math.random()* (max-min)) + min; // il max è escluso il min è incluso
 }
 
+//Alternativa all'INCLUDES
+/* function isIn(valore,array){
+var found = false;
+var i=0;
+while (found == false && i < array.length){
+    if(array[i] == valore)
+        found= true;
+    }
+  i++
+ }
+return found;
 
+}
+ */
 
 
