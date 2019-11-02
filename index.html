@@ -10,10 +10,40 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="dif1()" class="btn btn-primary">Dif1 </button>
-    <button type="button" onclick="dif2()" class="btn btn-primary">Dif2</button>
-    <button type="button" onclick="dif3()" class="btn btn-primary">Dif3</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" style="color:white;">
+                <h1 >Voglio fare un gioco con te</h1>
+                <h5>Stiamo per cominciare un gioco che potrà portarti alla gloria o...Alla morte !</h5>
+                <div class="text-left">
+                 <h4>REGOLE</h4>
+                 <ul class="first">
+                     <li>Il gioco consiste nello scegliere dei numeri ed evitare i numeri BOMBA.</li>
+                     <li>I numeri BOMBA vengono generati automaticamente dal pc e sono un totale di 16.</li>
+                    <li>Non puoi inserire 2 volte lo stesso numero (tanto non ci riusciresti)</li>
+                    <li>Seleziona la difficoltà di gioco tra easy,normal e hard</li>
+                        <ul class="nest">
+                            <li>Se scegli <span style="color:darkgreen">EASY</span>  i numeri saranno compresi tra 1 e 100 e potrai vincere se totalizzerai un punteggio di almeno 30
+                                punti.</li>
+                            <li>Se scegli <span style="color:orange">NORMAL</span> i numeri saranno compresi tra 1 e 80 e potrai vincere se totalizzerai un punteggio di almeno 40
+                                punti.</li>
+                            <li>Se scegli <span style="color:red">HARD</span> i numeri saranno compresi tra 1 e 50 e potrai vincere solo totalizzando un <span style="color:red">PERFECT SCORE</span> di 34 punti.
+                            </li>
+
+                        </ul>
+                     
+                     
+                     
+                </ul>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    <button type="button"   id="easy" class="btn btn-primary">Dif1 </button>
+    <button type="button"  id="normal" class="btn btn-primary">Dif2</button>
+    <button type="button"  id="hard" class="btn btn-primary">Dif3</button>
     
-    <script src="js/script2.js"></script>
+    <script src="js/script3.js"></script>
 </body>
 </html>

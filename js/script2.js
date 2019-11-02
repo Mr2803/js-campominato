@@ -11,6 +11,10 @@
 // consentito.
 
 //genera un numero casuale non ripetuto
+var gruppoMine = [];
+
+var numRand;
+
 var beccato = false;
 
 
@@ -24,8 +28,7 @@ var punteggio = 0;
 
 //Blocco funzioni
 function dif1(){
-    var gruppoMine = [];
-    var numRand;
+
     var maxNumbPcUser = 101;
 
 
@@ -39,7 +42,7 @@ function dif1(){
 
     console.log("i numeri della morte sono : " + gruppoMine)
  
-    while (beccato == false && punteggio < 84) {
+    while (beccato == false && punteggio < 30) {
    
         sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
         console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
@@ -70,9 +73,9 @@ function dif1(){
     }
 }
 
+
 function dif2(){
-    var gruppoMine = [];
-    var numRand;
+    
     var maxNumbPcUser = 81;
     
     while (gruppoMine.length < 16) {
@@ -85,8 +88,8 @@ function dif2(){
 
     console.log("i numeri della morte sono : " + gruppoMine)
 
-    while (beccato == false && punteggio < 64) {
-        sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
+    while (beccato == false && punteggio < 40) {
+        sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 80"));
         console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
 
         if (sceltaPlayer > 0 && sceltaPlayer < maxNumbPcUser && !isNaN(sceltaPlayer)) {
@@ -115,12 +118,11 @@ function dif2(){
     } else {
         console.log("sembra impossibile , ma hai vinto... Porta Simone in tabaccheria")
     }
-;
+
 }
 
 function dif3(){
-    var gruppoMine = [];
-    var numRand;
+    
     var maxNumbPcUser = 51;
     
     while (gruppoMine.length < 16) {
@@ -133,9 +135,9 @@ function dif3(){
 
     console.log("i numeri della morte sono : " + gruppoMine)
     
-    while (beccato == false && punteggio < 3) {
+    while (beccato == false && punteggio < 34) {
       
-        sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
+        sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 50"));
         console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
         
         if (sceltaPlayer > 0 && sceltaPlayer < maxNumbPcUser && !isNaN(sceltaPlayer)) {
@@ -165,7 +167,7 @@ function dif3(){
     } else { 
         console.log("sembra impossibile , ma hai vinto... Porta Simone in tabaccheria")
     }
-;
+
 }
 
 
