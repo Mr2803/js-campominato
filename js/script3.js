@@ -34,7 +34,7 @@ var sceltaPlayer;
 
 var punteggio = 0;
     while (beccato == false && punteggio < punteggioVittoria ){
-    sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e 100"));
+    sceltaPlayer = parseInt(prompt("Scegli un numero tra 1 e " + (maxNumber - 1)));
     console.log("Il numero scelto dall'utente è :" + sceltaPlayer)
     
         if (sceltaPlayer > 0 && sceltaPlayer < maxNumber && !isNaN(sceltaPlayer)){
@@ -68,21 +68,21 @@ if(beccato==true){
 
 
 document.getElementById("easy").onclick = function () {
-    var maxNumber = 100;
+    var maxNumber = 101;
     var punteggioVittoria = 30;
-
+    
    
     gioco(maxNumber, punteggioVittoria);
 }
 document.getElementById("normal").onclick = function () {
-    var maxNumber = 80;
+    var maxNumber = 81;
     var punteggioVittoria = 40;
 
    
     gioco(maxNumber, punteggioVittoria);
 }
 document.getElementById("hard").onclick = function () {
-    var maxNumber = 50;
+    var maxNumber = 51;
     var punteggioVittoria = 34;
 
  
