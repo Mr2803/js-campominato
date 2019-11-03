@@ -25,7 +25,8 @@ while(gruppoMine.length<16){
     console.log(numRand)
 }
 
-console.log("i numeri della morte sono : " + gruppoMine)
+    document.getElementById("numeriBomba").innerHTML = "I numeri bomba erano : " + "[" + "<span>" + gruppoMine.sort(function (a, b) { return a - b }) + "</span>" + "]"; 
+
 
 
 var beccato = false;
@@ -55,12 +56,15 @@ var punteggio = 0;
     }
 
 }
-console.log("il gruppo di numeri scelti dal giocatore sono:" + gruppoNumeriPlayer)
+
+    document.getElementById("gruppoNumeriUser").innerHTML = "Il gruppo di numeri che hai scelto sono: " + "[" + "<span>" + gruppoNumeriPlayer + "</span>" + "]";
+
 if(beccato==true){
-    console.log("sei morto facendo " + punteggio + "punti")
-    console.log("il numero che l'ha portato alla morte è " + (gruppoNumeriPlayer.slice(-1)[0]))
+    document.getElementById("score").innerHTML = "Sei morto totalizzando un punteggio di: " + "<span>" + punteggio + "</span>" + " punti";
+    document.getElementById("deathNumber").innerHTML = "Il numero che ti ha portato alla morte è : " + "<span>" + gruppoNumeriPlayer.slice(-1)[0] + "</span>"
 } else { //condizioni per la vittoria
-    console.log("sembra impossibile , ma hai vinto... Porta Simone in tabaccheria")
+    document.getElementById("victory").innerHTML = "Sembra impossibile, ma hai vinto...Porta Simone in tabaccheria";
+
 }
 
 }
@@ -68,26 +72,21 @@ if(beccato==true){
 
 
 document.getElementById("easy").onclick = function () {
-    var maxNumber = 101;
-    var punteggioVittoria = 30;
-    
-   
-    gioco(maxNumber, punteggioVittoria);
+    var numMax = 101;
+    var victory = 30;
+    gioco(numMax, victory);
 }
 document.getElementById("normal").onclick = function () {
-    var maxNumber = 81;
-    var punteggioVittoria = 40;
-
-   
-    gioco(maxNumber, punteggioVittoria);
+    var numMax = 81;
+    var victory = 40;
+    gioco(numMax, victory);
 }
 document.getElementById("hard").onclick = function () {
-    var maxNumber = 51;
-    var punteggioVittoria = 34;
-
- 
-    gioco(maxNumber,punteggioVittoria);
+    var numMax = 51;
+    var victory = 34;
+    gioco(numMax, victory);
 }
+
 
 
 function getRandomInt(min,max){
@@ -95,6 +94,9 @@ function getRandomInt(min,max){
     max = Math.floor(max);
     return Math.floor(Math.random()* (max-min)) + min; // il max è escluso il min è incluso
 }
+
+
+
 
 //Alternativa all'INCLUDES
 /* function isIn(valore,array){

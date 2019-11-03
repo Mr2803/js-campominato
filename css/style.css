@@ -1,5 +1,5 @@
 body{
-    background:rgb(25,25,25);
+    background:rgb(44, 43, 43);
     font-weight: bold;
     font-family: 'Anonymous Pro', monospace;
 }
@@ -24,33 +24,33 @@ h5{
 }
 
 h4{
-  animation-delay: 4s;  
+  animation-delay: 3.5s;  
 }
 
 ul.first li:nth-child(1){
-  animation-delay: 6s;  
+  animation-delay: 5s;  
 }
 ul.first li:nth-child(2){
-  animation-delay: 8s;  
+  animation-delay: 6.5s;  
 }
 ul.first li:nth-child(3){
-  animation-delay: 10s;  
+  animation-delay: 8s;  
 }
 ul.first li:nth-child(4){
- animation-delay: 12s;  
+ animation-delay: 9.5s;  
 }
 ul.nest li:nth-child(1){
-    animation-delay: 14s;  
+    animation-delay: 11s;  
 }
 ul.nest li:nth-child(2){
-    animation-delay: 16s;  
+    animation-delay: 12.5s;  
 }
 ul.nest li:nth-child(3){
-    animation-delay: 18s;  
+    animation-delay: 14s;  
 }
 
 #difficult{
-    animation-delay: 20s;
+    animation-delay: 15.5s;
 }
 
 
@@ -64,85 +64,55 @@ ul.nest li:nth-child(3){
 }
 
 
-button{
-    position:absolute;
-    opacity:0;
-    animation-name:fromleft;
+#easy,
+#normal,
+#hard{
+    opacity: 0;
+    animation-name:opacityButton;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    animation-delay: 22s;
-}
-
-.my_cont-difficult{
-    position:relative;
     
 }
 
 #easy{
+  animation-delay: 11.5s;
     
-    animation-name:fromleft1;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 22s;
 }
 #normal{
-   
-    animation-name:fromleft2;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 23s;
+  animation-delay: 13s;
     
 }
 #hard{
-   
-    animation-name:fromleft3;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 24s;
+ animation-delay: 14.5s;
 }
 
-@keyframes fromleft1{
+@keyframes opacityButton{
     from{
-        top:100%;
-        left:-100%;
+        
         opacity:0;
     }
     to{
-        /* left:50px; */
-        top:100%;
-        left:0%;
+    
         opacity:1;
     }
 }
 
 
-@keyframes fromleft2{
-    from{
-        top:100%;
-        left:-100%;
-        opacity:0;
-    }
-    to{
-        /* left:50px; */
-        top:100%;
-        left:20%;
-        opacity:1;
-    }
+.result p{
+    color:white;
+
 }
-@keyframes fromleft3{
+
+/* @keyframes typing{
     from{
-        top:100%;
-        left:-100%;
-        opacity:0;
+        width: 0;
     }
     to{
-        /* left:50px; */
-        top:100%;
-        left:40%;
-        opacity:1;
+        width: 100%;
     }
+} */
+
+span{
+    color:orange;
 }
