@@ -1,7 +1,9 @@
 body{
-    background:black;
+    background:rgb(25,25,25);
     font-weight: bold;
+    font-family: 'Anonymous Pro', monospace;
 }
+
 
 
 h1,
@@ -47,39 +49,100 @@ ul.nest li:nth-child(3){
     animation-delay: 18s;  
 }
 
+#difficult{
+    animation-delay: 20s;
+}
+
 
 @keyframes opacity {
-    0%{
-        opacity : 0;
+    from{
+        opacity:0;
     }
-    10%{
-        opacity : 0.1;
+    to{
+        opacity:1;
     }
-    20%{
-        opacity : 0.2;
+}
+
+
+button{
+    position:absolute;
+    opacity:0;
+    animation-name:fromleft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 22s;
+}
+
+.my_cont-difficult{
+    position:relative;
+    
+}
+
+#easy{
+    
+    animation-name:fromleft1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 22s;
+}
+#normal{
+   
+    animation-name:fromleft2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 23s;
+    
+}
+#hard{
+   
+    animation-name:fromleft3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 24s;
+}
+
+@keyframes fromleft1{
+    from{
+        top:100%;
+        left:-100%;
+        opacity:0;
     }
-    30%{
-        opacity : 0.3;
+    to{
+        /* left:50px; */
+        top:100%;
+        left:0%;
+        opacity:1;
     }
-    40%{
-        opacity : 0.4;
+}
+
+
+@keyframes fromleft2{
+    from{
+        top:100%;
+        left:-100%;
+        opacity:0;
     }
-    50%{
-        opacity : 0.5;
+    to{
+        /* left:50px; */
+        top:100%;
+        left:20%;
+        opacity:1;
     }
-    60%{
-        opacity : 0.6;
+}
+@keyframes fromleft3{
+    from{
+        top:100%;
+        left:-100%;
+        opacity:0;
     }
-    70%{
-        opacity : 0.7;
-    }
-    80%{
-        opacity : 0.8;
-    }
-    90%{
-        opacity : 0.9;
-    }
-    100%{
-        opacity : 1;
+    to{
+        /* left:50px; */
+        top:100%;
+        left:40%;
+        opacity:1;
     }
 }
