@@ -46,9 +46,13 @@ var punteggio = 0;
             beccato = true;
             gruppoNumeriPlayer.push(sceltaPlayer);
         } else{
-            alert("l'hai mancata per un soffio , puoi continuare...per ora")
+            alert("Bravo, l'hai mancata , puoi continuare...per ora")
             gruppoNumeriPlayer.push(sceltaPlayer);
             punteggio++;
+            if(gruppoNumeriPlayer.length == (punteggioVittoria - 1)){
+                alert("Resta concentrato , ti manca un solo numero per la vittoria !")
+
+            }
             
         }
     } else{
