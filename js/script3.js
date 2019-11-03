@@ -49,9 +49,11 @@ var punteggio = 0;
             alert("Bravo, l'hai mancata , puoi continuare...per ora")
             gruppoNumeriPlayer.push(sceltaPlayer);
             punteggio++;
-            if(gruppoNumeriPlayer.length == (punteggioVittoria - 1)){
-                alert("Resta concentrato , ti manca un solo numero per la vittoria !")
-
+            if (gruppoNumeriPlayer.length == (punteggioVittoria / 2)){
+                alert("Bene, sei esattamente a metà strada...Ce la puoi fare ! 🤘🤘🤘")
+                
+            } else if (gruppoNumeriPlayer.length == (punteggioVittoria - 1)) {
+                alert("Resta concentrato , ti manca un solo numero per la vittoria ! 🤘🤘🤘")
             }
             
         }
